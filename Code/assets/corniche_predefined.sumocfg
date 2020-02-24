@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <input>
+        <net-file value="Corniche_base.net.xml"/>
+        <route-files value="corniche_taxiod_id_numbered.rou.xml"/>
+	<additional-files value="additionals.xml"/>
+    </input>
+    <time>
+        <begin value="0"/>
+        <end value="86400"/>
+        <step-length value='0.5'/>
+    </time>
+    <processing>
+        <device.rerouting.with-taz/>
+	<collision.action value="remove"/>
+        <collision.check-junctions value="true"/>
+	<collision.mingap-factor value="0"/>
+        <time-to-teleport value="-1"/>
+        <ignore-junction-blocker value="3"/>
+    </processing>
+    <traci_server>
+  	<remote-port value="8813"/>
+    </traci_server>
+
+  </configuration>
